@@ -26,13 +26,11 @@ QR Code Scanner and Generator is a Flutter application that allows users to scan
 Here are some screenshots of the app in action:
 
 ### Home Screen
-![Home Screen](screenshots/pic1.jpg | width=100)
-
+<img src="screenshots/pic1.jpg" width="100" />
 ### QR Code Scanner
-![Scanner Screen](screenshots/pic2.jpg | width=100)
-
+<img src="screenshots/pic2.jpg" width="100" />
 ### QR Code Generator
-![Generator Screen](screenshots/pic3.jpg | width=100) 
+<img src="screenshots/pic3.jpg" width="100" />
 
 ## Installation
 
