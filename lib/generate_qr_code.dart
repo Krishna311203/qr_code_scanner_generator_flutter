@@ -25,7 +25,7 @@ class _GenerateQRCodeState extends State<GenerateQRCode> {
                   ? Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
@@ -48,23 +48,32 @@ class _GenerateQRCodeState extends State<GenerateQRCode> {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           labelText: 'Enter Your Data',
+                          labelStyle: const TextStyle(color: Colors.white),
                         ),
+                        style: const TextStyle(color: Colors.white),
                       ),
                     ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 100),
               ElevatedButton(
                 onPressed: () {
                   if (isQRCodeGenerated) {
                     urlController.clear();
                     isQRCodeGenerated = false;
-                  } else if(urlController.text.isNotEmpty) {
+                  } else if (urlController.text.isNotEmpty) {
                     isQRCodeGenerated = true;
                   }
                   setState(() {});
                 },
-                child: Text(isQRCodeGenerated
-                    ? "Create Another QR Code"
-                    : "Generate QR Code"),
+                style: ElevatedButton.styleFrom(
+                  elevation: 0,
+                  minimumSize: const Size(200, 50),
+                ),
+                child: Text(
+                  isQRCodeGenerated
+                      ? "Create Another QR Code"
+                      : "Generate QR Code",
+                  style: const TextStyle(color: Color(0xff0f0442)),
+                ),
               ),
             ],
           ),
